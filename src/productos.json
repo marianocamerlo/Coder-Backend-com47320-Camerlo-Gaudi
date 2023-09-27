@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Planta de Interior 'Ficus Elastica'",
+    "description": "Ficus elastica, también conocido como árbol de caucho, es una planta de interior popular conocida por su follaje brillante y atractivo.",
+    "price": 29.99,
+    "thumbnail": "imagen1.jpg",
+    "stock": 15,
+    "id": 1
+  },
+  {
+    "title": "Suculenta 'Echeveria'",
+    "description": "La echeveria es una hermosa suculenta con hojas en forma de roseta que varían en color desde verde hasta morado.",
+    "price": 8.99,
+    "thumbnail": "imagen2.jpg",
+    "stock": 20,
+    "id": 2
+  },
+  {
+    "title": "Cactus 'Opuntia'",
+    "description": "El cactus Opuntia, también conocido como cactus de paleta, es fácil de cuidar y presenta hojas planas en forma de paleta.",
+    "price": 12.99,
+    "thumbnail": "imagen3.jpg",
+    "stock": 12,
+    "id": 3
+  },
+  {
+    "title": "Planta de Interior 'Monstera Deliciosa'",
+    "description": "La Monstera deliciosa es una planta de interior tropical con hojas grandes y perforadas que le dan un aspecto único.",
+    "price": 34.99,
+    "thumbnail": "imagen4.jpg",
+    "stock": 18,
+    "id": 4
+  },
+  {
+    "title": "Helecho Boston",
+    "description": "El helecho Boston es un helecho colgante muy apreciado por su elegante follaje y facilidad de cuidado.",
+    "price": 16.99,
+    "thumbnail": "imagen5.jpg",
+    "stock": 25,
+    "id": 5
+  },
+  {
+    "title": "Palma Areca",
+    "description": "La palma areca es una planta de interior que agrega un toque de exotismo con sus hojas plumosas y su aspecto tropical.",
+    "price": 45.99,
+    "thumbnail": "imagen6.jpg",
+    "stock": 10,
+    "id": 6
+  },
+  {
+    "title": "Planta de Interior 'Pothos'",
+    "description": "El pothos es una planta de interior popular y fácil de cuidar que se adapta bien a diferentes condiciones de luz.",
+    "price": 9.99,
+    "thumbnail": "imagen7.jpg",
+    "stock": 30,
+    "id": 7
+  },
+  {
+    "title": "Planta de Interior 'Calathea'",
+    "description": "La calathea es conocida por sus hojas con patrones de color únicos y es ideal para decorar interiores.",
+    "price": 19.99,
+    "thumbnail": "imagen8.jpg",
+    "stock": 14,
+    "id": 8
+  },
+  {
+    "title": "Cactus 'Barrel'",
+    "description": "El cactus de barril es un cactus redondeado y espinoso que agrega un toque del desierto a tu espacio interior.",
+    "price": 11.99,
+    "thumbnail": "imagen9.jpg",
+    "stock": 22,
+    "id": 9
+  },
+  {
+    "title": "Planta de Interior 'Sansevieria'",
+    "description": "La sansevieria, también conocida como 'lengua de suegra', es una planta de interior resistente que purifica el aire.",
+    "price": 14.99,
+    "thumbnail": "imagen10.jpg",
+    "stock": 17,
+    "id": 10
+  }
+]
