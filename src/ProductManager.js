@@ -5,7 +5,7 @@ class ProductManager {
     this.path = filePath;
   }
 
-  async loadProductsFromFile() {
+  async _readFile() {
     try {
       const data = await fs.readFile(this.path, "utf8");
       return JSON.parse(data);
@@ -14,12 +14,20 @@ class ProductManager {
     }
   }
 
-  async saveProductsToFile(products) {
+  async _writeFile(products) {
     try {
       await fs.writeFile(this.path, JSON.stringify(products, null, 2), "utf8");
     } catch (error) {
       console.error("Error al guardar productos en el archivo:", error);
     }
+  }
+
+  async loadProductsFromFile() {
+    return await this._readFile();
+  }
+
+  async saveProductsToFile(products) {
+    await this._writeFile(products);
   }
 
   async addProduct(product) {
@@ -41,9 +49,8 @@ class ProductManager {
     await this.saveProductsToFile(products);
   }
 
-  getNextId() {
-    const lastId =
-      this.products.length > 0 ? this.products[this.products.length - 1].id : 0;
+  getNextId(products) {
+    const lastId = products.length > 0 ? products[products.length - 1].id : 0;
     return lastId + 1;
   }
 

@@ -8,6 +8,7 @@ const server = app.listen(port, () =>
   console.log(`Servidor activo en puerto ${port}`)
 );
 
+app.use("/static", express.static(__dirname + "/public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
