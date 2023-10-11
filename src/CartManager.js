@@ -46,19 +46,31 @@ class CartManager {
   async addProductToCart(idCart, idProduct, productQuantity) {
     this.Carts = await this.getCarts();
     const { quantity } = productQuantity;
+    
+    // Verificar si el producto existe antes de agregarlo al carrito
+    const productExists = await manager.getProductById(idProduct);
+  
+    if (!productExists) {
+      console.error(`Producto con ID ${idProduct} no encontrado.`);
+      return;
+    }
+  
     const indexCart = this.Carts.findIndex((element) => element.id === idCart);
     if (indexCart < 0) return console.log(`No se encontró ningún carrito con el ID: ${idCart}`);
     let foundProduct = false;
+  
     this.Carts[indexCart].products.forEach((element) => {
       if (element.product === idProduct) {
         element.quantity += quantity;
         foundProduct = true;
       }
     });
+  
     if (!foundProduct) {
-      const newProduct = { product: idProduct, ...productQuantity };
+      const newProduct = { product: idProduct, quantity };
       this.Carts[indexCart].products.push(newProduct);
     }
+  
     try {
       await fs.writeFile(this.path, JSON.stringify(this.Carts, null, 2), "utf-8");
     } catch (error) {

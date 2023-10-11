@@ -35,18 +35,29 @@ class ProductManager {
     if (
       !product.title ||
       !product.description ||
+      !product.code ||
       !product.price ||
-      !product.thumbnail ||
       !product.stock
     ) {
       console.error("Todos los campos son obligatorios.");
-      return;
+      return { success: false, error: "Todos los campos son obligatorios." };
+    }
+
+    const existingProduct = products.find((p) => p.code === product.code);
+    if (existingProduct) {
+      console.error(`Ya existe un producto con el code ${product.code}.`);
+      return {
+        success: false,
+        error: `Ya existe un producto con el code ${product.code}.`,
+      };
     }
 
     product.id = this.getNextId(products);
 
     products.push(product);
     await this.saveProductsToFile(products);
+
+    return { success: true, message: "Producto agregado correctamente." };
   }
 
   getNextId(products) {
@@ -54,8 +65,13 @@ class ProductManager {
     return lastId + 1;
   }
 
-  async getProducts() {
-    return await this.loadProductsFromFile();
+  async getProducts(limit) {
+    const allProducts = await this.loadProductsFromFile();
+    if (limit) {
+      return allProducts.slice(0, limit);
+    } else {
+      return allProducts;
+    }
   }
 
   async getProductById(id) {

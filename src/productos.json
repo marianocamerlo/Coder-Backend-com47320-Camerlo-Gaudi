@@ -2,6 +2,7 @@
   {
     "title": "Planta de Interior 'Ficus Elastica'",
     "description": "Ficus elastica, también conocido como árbol de caucho, es una planta de interior popular conocida por su follaje brillante y atractivo.",
+    "code": "a001",
     "price": 29.99,
     "thumbnail": "imagen1.jpg",
     "stock": 15,
@@ -10,6 +11,7 @@
   {
     "title": "Suculenta 'Echeveria'",
     "description": "La echeveria es una hermosa suculenta con hojas en forma de roseta que varían en color desde verde hasta morado.",
+    "code": "s065",
     "price": 8.99,
     "thumbnail": "imagen2.jpg",
     "stock": 20,
@@ -18,6 +20,7 @@
   {
     "title": "Cactus 'Opuntia'",
     "description": "El cactus Opuntia, también conocido como cactus de paleta, es fácil de cuidar y presenta hojas planas en forma de paleta.",
+    "code": "d075",
     "price": 12.99,
     "thumbnail": "imagen3.jpg",
     "stock": 12,
@@ -26,6 +29,7 @@
   {
     "title": "Planta de Interior 'Monstera Deliciosa'",
     "description": "La Monstera deliciosa es una planta de interior tropical con hojas grandes y perforadas que le dan un aspecto único.",
+    "code": "j004",
     "price": 34.99,
     "thumbnail": "imagen4.jpg",
     "stock": 18,
@@ -34,6 +38,7 @@
   {
     "title": "Helecho Boston",
     "description": "El helecho Boston es un helecho colgante muy apreciado por su elegante follaje y facilidad de cuidado.",
+    "code": "s015",
     "price": 16.99,
     "thumbnail": "imagen5.jpg",
     "stock": 25,
@@ -42,6 +47,7 @@
   {
     "title": "Palma Areca",
     "description": "La palma areca es una planta de interior que agrega un toque de exotismo con sus hojas plumosas y su aspecto tropical.",
+    "code": "c054",
     "price": 45.99,
     "thumbnail": "imagen6.jpg",
     "stock": 10,
@@ -50,6 +56,7 @@
   {
     "title": "Planta de Interior 'Pothos'",
     "description": "El pothos es una planta de interior popular y fácil de cuidar que se adapta bien a diferentes condiciones de luz.",
+    "code": "a022",
     "price": 9.99,
     "thumbnail": "imagen7.jpg",
     "stock": 30,
@@ -58,6 +65,7 @@
   {
     "title": "Planta de Interior 'Calathea'",
     "description": "La calathea es conocida por sus hojas con patrones de color únicos y es ideal para decorar interiores.",
+    "code": "j088",
     "price": 19.99,
     "thumbnail": "imagen8.jpg",
     "stock": 14,
@@ -66,6 +74,7 @@
   {
     "title": "Cactus 'Barrel'",
     "description": "El cactus de barril es un cactus redondeado y espinoso que agrega un toque del desierto a tu espacio interior.",
+    "code": "b067",
     "price": 11.99,
     "thumbnail": "imagen9.jpg",
     "stock": 22,
@@ -74,6 +83,7 @@
   {
     "title": "Planta de Interior 'Sansevieria'",
     "description": "La sansevieria, también conocida como 'lengua de suegra', es una planta de interior resistente que purifica el aire.",
+    "code": "c020",
     "price": 14.99,
     "thumbnail": "imagen10.jpg",
     "stock": 17,

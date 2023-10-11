@@ -5,7 +5,8 @@ const router = Router();
 const manager = new ProductManager("./src/file/productos.json");
 
 router.get("/", async (req, res) => {
-  const productsFromFile = await manager.getProducts();
+  const limit = req.query.limit; // Obtener el límite de la consulta
+  const productsFromFile = await manager.getProducts(limit);
   res.send({ status: "success", productsFromFile });
 });
 
@@ -21,8 +22,6 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const newProduct = req.body;
-
-  // Validación de campos obligatorios
   const requiredFields = [
     "title",
     "description",
@@ -31,7 +30,6 @@ router.post("/", async (req, res) => {
     "status",
     "stock",
     "category",
-    "thumbnail",
   ];
   const missingFields = requiredFields.filter(
     (field) => !(field in newProduct)
@@ -44,8 +42,26 @@ router.post("/", async (req, res) => {
     });
   }
 
-  await manager.addProduct(newProduct);
-  res.send({ status: "success", message: "Producto agregado" });
+  const products = await manager.loadProductsFromFile();
+  const existingProduct = products.find((p) => p.code === newProduct.code);
+
+  if (existingProduct) {
+    return res.status(400).send({
+      status: "error",
+      error: `Ya existe un producto con el código ${newProduct.code}`,
+    });
+  }
+
+  const result = await manager.addProduct(newProduct);
+
+  if (!result.success) {
+    return res.status(400).send({
+      status: "error",
+      error: result.error,
+    });
+  }
+
+  res.send({ status: "success", message: result.message });
 });
 
 router.put("/:id", async (req, res) => {
@@ -61,7 +77,6 @@ router.put("/:id", async (req, res) => {
     "status",
     "stock",
     "category",
-    "thumbnail",
   ];
   const missingFields = requiredFields.filter((field) => !(field in newData));
 
