@@ -5,11 +5,7 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
-=======
-    "test": "echo \"Error: no test specified\" && exit 1",
->>>>>>> origin/main,
     "start": "node src/app.js"
   },
   "keywords": [],
